@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Parkolóház</title>
+<link rel="stylesheet" href="style.css">
+<script src="auto.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+<h2>Parkolóház</h2>
+
+<label>Parkolási zóna:</label>
+<select id="zona">
+    <option value="A">A zóna (1000 Ft/óra)</option>
+    <option value="B">B zóna (800 Ft/óra)</option>
+    <option value="C">C zóna (600 Ft/óra)</option>
+</select>
+
+<label>Jármű típusa:</label>
+<select id="jarmu">
+    <option value="1">Személyautó</option>
+    <option value="1.5">Teherautó (1.5x díj)</option>
+    <option value="1.2">Kisbusz (1.2x díj)</option>
+</select>
+
+<label>Parkolás időtartama (óra):</label>
+<input type="number" id="ora" min="0" value="0">
+
+<label>Parkolás időtartama (perc):</label>
+<input type="number" id="perc" min="0" max="59" value="0">
+
+<label>
+<input type="checkbox" id="berlet">
+Bérletes (20% kedvezmény)
+</label>
+
+<button onclick="szamol()">Díj kiszámítása</button>
+
+<div id="eredmeny" class="result" style="display:none;"></div>
+<div id="jegy" class="ticket" style="display:none;"></div>
+
+</div>
+
+
+</body>
+</html>
